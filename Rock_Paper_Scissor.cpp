@@ -4,13 +4,13 @@
 //
 
 #include <iostream>
-#include <ctime> // For time(0)
+#include <ctime> 
 #include <string>
 using namespace std;
 
 int userScore = 0;
 int botScore = 0;
-string game[3] = {"paper", "scissor", "rock"};  // Correct array initialization
+string game[3] = {"paper", "scissor", "rock"};  
 
 int options() {
     cout << "Please choose between:\n1 - Paper\n2 - Scissors\n3 - Rock";
@@ -21,7 +21,7 @@ int options() {
 }
 
 int Random() {
-    return rand() % 3 + 1;  // Generates 1, 2, or 3
+    return rand() % 3 + 1;  
 }
 
 void score(int user, int bot) {
@@ -48,7 +48,7 @@ void whoWon() {
 }
 
 int main(int argc, const char * argv[]) {
-    srand(time(0));  // Seed the random number generator
+    srand(time(0));  
     
     int rounds = 3;
     for (int i = 0; i < rounds; i++) {
@@ -67,7 +67,7 @@ int main(int argc, const char * argv[]) {
         score(userChoice, botChoice);
         
         if (userChoice == botChoice) {
-            rounds++;  // Add an extra round if it's a draw
+            rounds++;  
         }
     }
     
